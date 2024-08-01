@@ -1,0 +1,236 @@
+
+.containers {
+
+    display: flex;
+    margin: 20px;
+    animation: slideIn 1s ease-in-out;
+    margin-top: 10px;
+}
+
+aside {
+    width: 20%;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position:fixed;
+    position: sticky;
+    top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Sidebar Title */
+aside h1 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    animation: slideInFromTop 1s ease-in-out;
+}
+
+/* Sidebar Navigation List */
+aside nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside nav ul li {
+    margin: 10px 0;
+}
+
+aside nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+aside nav ul li a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+aside nav ul li a.active {
+    color: #007bff; /* Change the color for the active link */
+    font-weight: bold;
+    text-decoration: underline; /* Optional: Add underline to indicate active link */
+    transition: color 0.3s ease;
+}
+
+main {
+    width: 80%;
+    padding: 1rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out, zoomIn 1s ease-in-out;
+}
+
+
+.product-image {
+    width: 300px; /* Set the desired fixed width */
+    /* height: 200px; Set the desired fixed height */
+    object-fit: cover; /* Ensures the image covers the specified dimensions without distortion */
+    border-radius: 8px;
+    animation: fadeIn 1s ease-in-out, zoomIn 1s ease-in-out;
+    /* border: 1px solid red; */
+    /* box-shadow: 10px 14px 8px rgba(48, 47, 47, 0.1); */
+    box-shadow: 10px 10px 10px 0.4 black;
+    /* border: 1px solid red; */
+    box-shadow: 0px 0px 10px 1px rgb(75, 74, 74);
+}
+
+.image-container{
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+    /* box-shadow: 10px 10px 10px rgba(238, 8, 8, 0.1); */
+    box-shadow: 10px 10px 10px 0.5;
+}
+.benifits-container{
+    /* border: 1px solid red ; */
+    margin-top: 10px;
+}
+
+.info {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+    padding: 20px;
+    line-height: 1.6;
+    text-align: justify;
+
+}
+
+.info h2 {
+    margin-bottom: 10px;
+}
+
+.info ul {
+    list-style: disc;
+    margin-left: 20px;
+    text-align: justify;
+
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Style for the export information section */
+#export-info {
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+#export-info h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#export-info p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#export-info strong {
+    font-weight: bold;
+}
+
+#export-info ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#export-info ul li {
+    margin-bottom: 5px;
+}
+
+
+@media(max-width:991px){
+
+    aside{
+        display: none;
+    }
+
+    main{
+        width: 100%;
+    }
+
+
+}
